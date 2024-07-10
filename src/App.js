@@ -1,44 +1,43 @@
 import "./App.css";
 
 const App = () => {
+  const categories = [
+    {
+      id: 1,
+      title: 'Hats'
+    },
+    {
+      id: 2,
+      title: 'Jackets'
+    },
+    {
+      id: 3,
+      title: 'Sneakers'
+    },
+    {
+      id: 4,
+      title: 'Womans'
+    },
+    {
+      id: 5,
+      title: 'Mans'
+    }
+  ];
+
   return (
     <div className="App">
       <div className="categories-container">
-        <div className="category-container">
-          {/*img*/}
-          <div className="category-body-container"> 
-            <h2>Hats</h2>
-            <p>Shop now</p>
-          </div>
-        </div>
-        <div className="category-container">
-          {/*img*/}
-          <div className="category-body-container"> 
-            <h2>Jackets</h2>
-            <p>Shop now</p>
-          </div>
-        </div>
-        <div className="category-container">
-          {/*img*/}
-          <div className="category-body-container"> 
-            <h2>Sneakers</h2>
-            <p>Shop now</p>
-          </div>
-        </div>
-        <div className="category-container">
-          {/*img*/}
-          <div className="category-body-container"> 
-            <h2>Womans</h2>
-            <p>Shop now</p>
-          </div>
-        </div>
-        <div className="category-container">
-          {/*img*/}
-          <div className="category-body-container"> 
-            <h2>Mens</h2>
-            <p>Shop now</p>
-          </div>
-        </div>
+        {categories.map((e) => {
+          return (
+            <div className="category-container">
+              {/*img*/}
+              <div className="category-body-container">
+                <h2>{e.title}</h2>
+                <p>Shop now</p>
+              </div>
+            </div>
+          );
+        })}
       </div>
     </div>
   );
